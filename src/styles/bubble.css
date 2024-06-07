@@ -1,0 +1,7 @@
+.chat-bubble {
+  width: 32rem;
+  height: 24em;
+  border-radius: 25px;
+  padding: 20px;
+  background-color: white;
+}

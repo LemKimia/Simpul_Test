@@ -7,12 +7,12 @@ import {
   useMemo,
   useState,
 } from "react";
-import { Room } from "@/utils/types/types";
-import { getChatRoom } from "@/utils/api/api";
+import { List } from "@/utils/types/room-list-types";
+import { getChatList } from "@/utils/api/api";
 import { toast } from "sonner";
 
 interface InboxProps {
-  roomList: Room[];
+  roomList: List[];
 }
 
 interface Props {
@@ -26,11 +26,11 @@ const initialValue: InboxProps = {
 export const InboxContext = createContext<InboxProps>(initialValue);
 
 export const InboxProvider = ({ children }: Props) => {
-  const [roomList, setRoomList] = useState<Room[]>([]);
+  const [roomList, setRoomList] = useState<List[]>([]);
 
   const fetchData = useCallback(async () => {
     try {
-      const response = await getChatRoom();
+      const response = await getChatList();
       setRoomList(response.data);
     } catch (error) {
       const errorMessage = (error as Error).message.toString();

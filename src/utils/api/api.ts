@@ -1,12 +1,15 @@
 
-import { ResponseData} from "@/utils/types/types";
-import axiosWithConfig from "./axiosWithConfig";
+import { RoomResponse} from "@/utils/types/types";
+import axios from "axios";
 
-export const getComment = async () => {
+
+export const getChatRoom = async (): Promise<RoomResponse> => {
   try {
-    const response = await axiosWithConfig.get("/comment");
+    const response = await axios.get(
+      "https://samuel-simple-quicks.vercel.app/api/conversation"
+    );
 
-    return response.data as ResponseData
+    return response.data as RoomResponse;
   } catch (error: any) {
     throw Error(error.response.data.message);
   }

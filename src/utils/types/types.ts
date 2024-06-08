@@ -1,14 +1,27 @@
-export interface ResponseData {
-  data: Comment;
-  total: number;
-  page: number;
-  limit: number;
+export interface RoomResponse {
+  data: Room[];
+  message: string;
 }
 
-export interface Comment {
+export interface Room {
   id: string;
-  message: string;
-  owner: object;
-  post: string;
-  publishDate: string;
+  title: string;
+  lastMessage: {
+    user: {
+      id: string;
+      name: string;
+    };
+  };
+  createdAt: string;
+}
+
+export interface Messages {
+  user: [
+    {
+      id: string;
+      name: string;
+    }
+  ];
+  content: string;
+  createdAt: string;
 }

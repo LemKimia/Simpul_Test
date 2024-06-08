@@ -1,16 +1,39 @@
-import { useState } from "react";
+import { getComment } from "@/utils/api/api";
+import { useEffect, useState } from "react";
+import { toast } from "sonner";
 
 const ChatBubble = () => {
-    const [showChat, setShowChat] = useState(false)
+  const [chatList, setChatList] = useState<Comment>();
+  const [mode, setMode] = useState<"list" | "detail">("list");
+
+  const fetchData = async () => {
+    try {
+      const response = await getComment();
+
+      setChatList(response.data);
+    } catch (error) {
+      toast((error as Error).message.toString());
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
-    <div className="chat-bubble flex flex-col">
+    <div className="bubble flex flex-col">
       <div>
         <img src="public\Search Bar.png" alt="Search Bar" />
       </div>
-      <div>
-        tes
-      </div>
+      {mode === "list" ? (
+        <div>
+          <p>list</p>
+        </div>
+      ) : (
+        <div>
+          <p>detail</p>
+        </div>
+      )}
     </div>
   );
 };

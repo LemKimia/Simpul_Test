@@ -1,9 +1,9 @@
-
-
 const TaskBubble = () => {
   return (
-    <div className="">TaskBubble</div>
-  )
-}
+    <div className="bubble flex flex-col">
+      <p>tes</p>
+    </div>
+  );
+};
 
-export default TaskBubble
+export default TaskBubble;

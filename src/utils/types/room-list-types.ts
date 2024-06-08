@@ -1,9 +1,9 @@
-export interface RoomResponse {
-  data: Room[];
+export interface ListResponse {
+  data: List[];
   message: string;
 }
 
-export interface Room {
+export interface List {
   id: string;
   title: string;
   lastMessage: {

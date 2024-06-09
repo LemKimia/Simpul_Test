@@ -10,6 +10,7 @@ export interface List {
     user: {
       id: string;
       name: string;
+      message: string
     };
   };
   createdAt: string;

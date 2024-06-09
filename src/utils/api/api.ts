@@ -17,12 +17,15 @@ export const getChatList = async (): Promise<ListResponse> => {
 };
 
 export const getChatRoom = async (id: string) => {
+  const corsAnywhereUrl = "https://cors-anywhere.herokuapp.com/";
+  const targetUrl = `https://samuel-simple-quicks.vercel.app/api/conversation/${id}`;
+  const fullUrl = corsAnywhereUrl + targetUrl;
+
   try {
-    const response = await axios.get(
-      `https://samuel-simple-quicks.vercel.app/api/conversation/${id}`
-    );
+    const response = await axios.get(fullUrl);
 
     return response.data as RoomResponse;
+    
   } catch (error: any) {
     throw Error(error.response.data.message);
   }

@@ -15,7 +15,7 @@ const InboxBubble = () => {
     <div className="bubble flex flex-col gap-5">
       <div>
         <img
-          src="public\Search Bar.png"
+          src="/Search Bar.png"
           alt="Search Bar"
           onClick={handleCloseInboxClick}
         />

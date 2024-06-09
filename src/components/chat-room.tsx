@@ -17,7 +17,7 @@ const ChatRoom = () => {
     <div className="bubble flex flex-col">
       <div>
         <img
-          src="public\Search Bar.png"
+          src="/Search Bar.png"
           alt="Search Bar"
           onClick={handleCloseInboxClick}
         />

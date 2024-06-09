@@ -68,7 +68,7 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "slide-in": {
+        "slide-right": {
           "0%": {
             opacity: 0,
             transform: "translateX(30px) scale(0.9)",
@@ -78,11 +78,33 @@ module.exports = {
             transform: "translateX(0px) scale(1)",
           },
         },
+        "slide-left": {
+          "0%": {
+            opacity: 0,
+            transform: "translateX(-30px) scale(0.9)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateX(0px) scale(1)",
+          },
+        },
+        "slide-up": {
+          "0%": {
+            opacity: 0,
+            transform: "translateY(30px) scale(0.9)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateY(0px) scale(1)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "slide-in": "slide-in 0.3s ease-out forwards",
+        "slide-right": "slide-right 0.3s ease-out forwards",
+        "slide-left": "slide-left 0.3s ease-out forwards",
+        "slide-up": "slide-up 0.3s ease-out forwards",
       },
       fontFamily: {
         cover: ["Montserrat", "sans-serif"],

@@ -10,7 +10,6 @@ interface ComponentState {
   clicked: boolean;
   hovered: boolean;
   visible: boolean; 
-  mode: "list" | "room"
 }
 
 interface InteractionState {
@@ -20,8 +19,7 @@ interface InteractionState {
 interface InteractionActions {
   setClicked: (component: string, value: boolean) => void;
   setHovered: (component: string, value: boolean) => void;
-  setVisible: (component: string, value: boolean) => void; 
-  setMode: (component: string, value: "list" | "room") => void
+  setVisible: (component: string, value: boolean) => void;
 }
 
 interface InteractionContextProps {
@@ -39,7 +37,7 @@ const initialValue: InteractionContextProps = {
     setClicked: () => {},
     setHovered: () => {},
     setVisible: () => {},
-    setMode: () => {}
+
   },
 };
 
@@ -76,15 +74,11 @@ export const InteractionProvider = ({ children }: Props) => {
     setComponentState(component, { visible: value });
   };
 
-  const setMode = (component: string, value: "list" | "room") => {
-    setComponentState(component, {mode: value})
-  }
 
   const actions: InteractionActions = {
     setClicked,
     setHovered,
     setVisible,
-    setMode,
   };
 
   return (

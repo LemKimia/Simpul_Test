@@ -3,6 +3,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "@/pages/homepage";
 import Cover from "@/pages";
 
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,7 +17,11 @@ const router = createBrowserRouter([
 ]);
 
 const app = () => {
-  return <RouterProvider router={router} />;
+  return (
+   
+      <RouterProvider router={router} />
+  
+  );
 };
 
 export default app;

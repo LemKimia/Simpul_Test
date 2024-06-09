@@ -32,6 +32,7 @@ export const ChatRoomProvider = ({ children }: Props) => {
     try {
       const response = await getChatRoom(id);
       setChatRoom(response.data);
+      console.log(response);
     } catch (error) {
       const errorMessage = (error as Error).message.toString();
       console.error("Failed to fetch chat rooms:", errorMessage);

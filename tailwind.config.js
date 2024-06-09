@@ -77,6 +77,9 @@ module.exports = {
         cover: ["Montserrat", "sans-serif"],
         lato: ["Lato", "sans-serif"],
       },
+      borderWidth: {
+        0.5: "0.5px"
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

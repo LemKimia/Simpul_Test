@@ -1,4 +1,4 @@
-const { X } = require('lucide-react');
+const { X } = require("lucide-react");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -68,18 +68,29 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "slide-in": {
+          "0%": {
+            opacity: 0,
+            transform: "translateX(30px) scale(0.9)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateX(0px) scale(1)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "slide-in": "slide-in 0.3s ease-out forwards",
       },
       fontFamily: {
         cover: ["Montserrat", "sans-serif"],
         lato: ["Lato", "sans-serif"],
       },
       borderWidth: {
-        0.5: "0.5px"
-      }
+        0.5: "0.5px",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

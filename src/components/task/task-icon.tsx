@@ -1,4 +1,9 @@
-const TaskIcon = ({ isVisible, onClick }) => (
+interface TaskIconProps {
+  isVisible: boolean;
+  onClick: () => void;
+}
+
+const TaskIcon: React.FC<TaskIconProps> = ({ isVisible, onClick }) => (
   <>
     {!isVisible && (
       <img
@@ -26,4 +31,4 @@ const TaskIcon = ({ isVisible, onClick }) => (
   </>
 );
 
-export default TaskIcon
+export default TaskIcon;

@@ -1,4 +1,9 @@
-const InboxIcon = ({ isVisible, onClick }) => (
+interface InboxIconProps {
+  isVisible: boolean;
+  onClick: () => void;
+}
+
+const InboxIcon: React.FC<InboxIconProps> = ({ isVisible, onClick }) => (
   <>
     {!isVisible && (
       <img
@@ -26,4 +31,4 @@ const InboxIcon = ({ isVisible, onClick }) => (
   </>
 );
 
-export default InboxIcon
+export default InboxIcon;

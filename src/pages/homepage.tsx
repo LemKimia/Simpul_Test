@@ -1,8 +1,11 @@
+import Navbar from "@/components/navbar";
+
 import InboxBubble from "@/components/inbox/inbox-bubble";
 import InboxIcon from "@/components/inbox/inbox-icon";
-import Navbar from "@/components/navbar";
+
 import TaskBubble from "@/components/task/task-bubble";
 import TaskIcon from "@/components/task/task-icon";
+
 import { useInteraction } from "@/utils/context/interaction-context";
 
 const Homepage = () => {

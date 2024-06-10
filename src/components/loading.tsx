@@ -1,9 +1,8 @@
 interface Props {
-    placeholder: string
+  placeholder: string;
 }
 
-const Loading: React.FC<Props> = ({placeholder}) => {
-
+const Loading: React.FC<Props> = ({ placeholder }) => {
   return (
     <div className="flex flex-col justify-items-center items-center">
       <svg

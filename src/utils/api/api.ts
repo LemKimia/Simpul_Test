@@ -1,8 +1,7 @@
 import axios from "axios";
-import { ListResponse} from "@/utils/types/room-list-types";
 
+import { ListResponse } from "@/utils/types/room-list-types";
 import { RoomResponse } from "@/utils/types/chat-room-types";
-
 
 export const getChatList = async (): Promise<ListResponse> => {
   try {
@@ -25,7 +24,6 @@ export const getChatRoom = async (id: string) => {
     const response = await axios.get(fullUrl);
 
     return response.data as RoomResponse;
-    
   } catch (error: any) {
     throw Error(error.response.data.message);
   }

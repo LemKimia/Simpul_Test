@@ -12,10 +12,9 @@ export interface Room {
       name: string;
     }
   ];
-  messages: Messages[]
+  messages: Messages[];
   createdAt: string;
 }
-
 
 export interface Messages {
   user: {

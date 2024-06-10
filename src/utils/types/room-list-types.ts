@@ -16,13 +16,3 @@ export interface List {
   createdAt: string;
 }
 
-export interface Messages {
-  user: [
-    {
-      id: string;
-      name: string;
-    }
-  ];
-  content: string;
-  createdAt: string;
-}

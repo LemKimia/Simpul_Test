@@ -8,8 +8,7 @@ import {
 
 interface ComponentState {
   clicked: boolean;
-  hovered: boolean;
-  visible: boolean; 
+  visible: boolean;
 }
 
 interface InteractionState {
@@ -18,7 +17,6 @@ interface InteractionState {
 
 interface InteractionActions {
   setClicked: (component: string, value: boolean) => void;
-  setHovered: (component: string, value: boolean) => void;
   setVisible: (component: string, value: boolean) => void;
 }
 
@@ -35,9 +33,7 @@ const initialValue: InteractionContextProps = {
   states: {},
   actions: {
     setClicked: () => {},
-    setHovered: () => {},
     setVisible: () => {},
-
   },
 };
 
@@ -66,18 +62,12 @@ export const InteractionProvider = ({ children }: Props) => {
     setComponentState(component, { clicked: value, visible: value });
   };
 
-  const setHovered = (component: string, value: boolean) => {
-    setComponentState(component, { hovered: value, visible: value });
-  };
-
   const setVisible = (component: string, value: boolean) => {
     setComponentState(component, { visible: value });
   };
 
-
   const actions: InteractionActions = {
     setClicked,
-    setHovered,
     setVisible,
   };
 

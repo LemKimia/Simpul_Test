@@ -34,7 +34,7 @@ export const InboxProvider = ({ children }: Props) => {
       setRoomList(response.data);
     } catch (error) {
       const errorMessage = (error as Error).message.toString();
-      console.error("Failed to fetch chat rooms:", errorMessage);
+
       toast(errorMessage);
     }
   }, []);

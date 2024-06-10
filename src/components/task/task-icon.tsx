@@ -18,7 +18,7 @@ const TaskIcon: React.FC<TaskIconProps> = ({ isVisible, onClick }) => (
         <img
           src="/Task 2.png"
           alt="Task icon when opened"
-          className="absolute left-3 w-24"
+          className="absolute left-3 w-18"
           onClick={onClick}
         />
         <img

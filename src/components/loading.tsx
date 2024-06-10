@@ -1,4 +1,9 @@
-const Loading = () => {
+interface Props {
+    placeholder: string
+}
+
+const Loading: React.FC<Props> = ({placeholder}) => {
+
   return (
     <div className="flex flex-col justify-items-center items-center">
       <svg
@@ -17,7 +22,7 @@ const Loading = () => {
           fill="currentFill"
         />
       </svg>
-      <p className="font-lato text-gray-500">Loading Tasks...</p>
+      <p className="font-lato text-gray-500">{placeholder}</p>
     </div>
   );
 };

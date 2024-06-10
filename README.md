@@ -1,30 +1,84 @@
-# React + TypeScript + Vite
+# Simple Quicks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Simple Quicks is a web application that offers chat and task management features. While the project is still under development, the current version focuses on displaying chat lists.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [API Documentation](#api-documentation)
+- [Contact](#contact)
 
-## Expanding the ESLint configuration
+## Introduction
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Simple Quicks aims to provide a seamless user experience for managing chats and tasks within a team or group setting. While the project is still in progress, the current version showcases the chat feature with a focus on displaying chat lists.
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- Chat functionality
+  - View list of chats
+  - See room chats (planned, but not implemented)
+  - Chat reply (planned, but not implemented)
+- Task management (planned, but not implemented)
+  - Create, edit, and delete task
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Technologies Used
+
+- React.js
+- TypeScript
+- Tailwind CSS
+- ShadCN
+
+## Getting Started
+
+To get a local copy of Simple Quicks up and running, follow these steps:
+
+### Prerequisites
+
+- Node.js
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+git clone https://github.com/your-username/simple-quicks.git
+
+3. Navigate to the project directory:
+   
+cd simple-quicks
+
+5. Install dependencies:
+   
+npm install
+  
+### Deployment
+
+The project is deployed using Vercel. You can access the live version [here](https://simpul-tech-samuel-joel.vercel.app/). 
+  
+## Usage
+
+To start the development server and view the application in your browser, use the following command:
+npm start
+
+## API Documentation
+
+Simple Quicks utilizes a custom API built with Next.js to handle backend functionality. The API is deployed on Vercel.
+
+### Custom API
+
+The custom API is built using Next.js, providing a robust backend for Simple Quicks. It handles various functionalities such as chat data management (completed) and planned task management features.
+
+### API Deployment
+
+The API is deployed on Vercel, ensuring reliable access and scalability. You can access the deployed API [here](https://samuel-simple-quicks.vercel.app/). You can also read the documentation [here](https://github.com/LemKimia/Samuel_Simple_Quicks).
+
+
+## Contact
+
+For any questions or feedback, please contact [samueljoel464@gmail.com](samueljoel464@gmail.com).

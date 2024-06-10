@@ -47,7 +47,7 @@ To get a local copy of Simple Quicks up and running, follow these steps:
 
 1. Clone the repository:
 
-git clone https://github.com/your-username/simple-quicks.git
+git clone 
 
 3. Navigate to the project directory:
    

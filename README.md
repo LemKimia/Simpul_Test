@@ -76,7 +76,7 @@ The custom API is built using Next.js, providing a robust backend for Simple Qui
 
 ### API Deployment
 
-The API is deployed on Vercel, ensuring reliable access and scalability. You can access the deployed API [here](https://samuel-simple-quicks.vercel.app/). You can also read the documentation [here](https://github.com/LemKimia/Samuel_Simple_Quicks).
+The API is deployed on Vercel, ensuring reliable access and scalability. You can read the documentation [here](https://github.com/LemKimia/Samuel_Simple_Quicks).
 
 
 ## Contact
